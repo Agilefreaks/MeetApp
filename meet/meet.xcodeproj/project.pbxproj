@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		350BDC68F3B0DCB2FB52265A /* Pods_meetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B58CFBCB7EE2ED9C7FFECA /* Pods_meetTests.framework */; };
 		4302F0EAB8AAD7A7E0C8082D /* Pods_meet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3FB5C71C0BD1C51E15E142 /* Pods_meet.framework */; };
+		FD546E4220690B3A0086E08D /* MyItineraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD546E4120690B3A0086E08D /* MyItineraryTableViewController.swift */; };
+		FD546E4520690BD10086E08D /* MyItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD546E4420690BD10086E08D /* MyItineraryTableViewCell.swift */; };
 		FDDEF9892068F2590023FDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEF9882068F2590023FDB6 /* AppDelegate.swift */; };
-		FDDEF98B2068F2590023FDB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEF98A2068F2590023FDB6 /* ViewController.swift */; };
 		FDDEF98E2068F2590023FDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEF98C2068F2590023FDB6 /* Main.storyboard */; };
 		FDDEF9902068F2590023FDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDEF98F2068F2590023FDB6 /* Assets.xcassets */; };
 		FDDEF9932068F2590023FDB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEF9912068F2590023FDB6 /* LaunchScreen.storyboard */; };
@@ -42,9 +43,10 @@
 		BA5055CC485E25628479A46C /* Pods-meetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-meetTests/Pods-meetTests.release.xcconfig"; sourceTree = "<group>"; };
 		C70C925B2264C3F5BE3B70B0 /* Pods-meet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meet/Pods-meet.debug.xcconfig"; sourceTree = "<group>"; };
 		E0B58CFBCB7EE2ED9C7FFECA /* Pods_meetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD546E4120690B3A0086E08D /* MyItineraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItineraryTableViewController.swift; sourceTree = "<group>"; };
+		FD546E4420690BD10086E08D /* MyItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItineraryTableViewCell.swift; sourceTree = "<group>"; };
 		FDDEF9852068F2590023FDB6 /* meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDEF9882068F2590023FDB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDDEF98A2068F2590023FDB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDDEF98D2068F2590023FDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDDEF98F2068F2590023FDB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDDEF9922068F2590023FDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FD546E4320690BB60086E08D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD546E4420690BD10086E08D /* MyItineraryTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FDDEF97C2068F2590023FDB6 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +144,7 @@
 				FDDEF9B82068F49D0023FDB6 /* Model */,
 				FDDEF9B92068F4AB0023FDB6 /* Network */,
 				FDDEF9BB2068F4C60023FDB6 /* Storyboards */,
+				FD546E4320690BB60086E08D /* Views */,
 				FDDEF98F2068F2590023FDB6 /* Assets.xcassets */,
 				FDDEF9912068F2590023FDB6 /* LaunchScreen.storyboard */,
 				FDDEF9942068F2590023FDB6 /* Info.plist */,
@@ -170,7 +181,7 @@
 		FDDEF9B72068F4880023FDB6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FDDEF98A2068F2590023FDB6 /* ViewController.swift */,
+				FD546E4120690B3A0086E08D /* MyItineraryTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -439,7 +450,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDEF98B2068F2590023FDB6 /* ViewController.swift in Sources */,
+				FD546E4220690B3A0086E08D /* MyItineraryTableViewController.swift in Sources */,
+				FD546E4520690BD10086E08D /* MyItineraryTableViewCell.swift in Sources */,
 				FDDEF9892068F2590023FDB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
