@@ -1,12 +1,18 @@
 PODS:
   - Alamofire (4.5.1)
+  - FoldingCell (3.0.0)
+  - JSONAPI (1.0.7)
 
 DEPENDENCIES:
   - Alamofire
+  - FoldingCell
+  - JSONAPI
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  FoldingCell: 55e9fcac546acc2c8f110f210af892aa90032160
+  JSONAPI: 8fed55fcfa08ee662674cd4f1bd03c37d8b34e03
 
-PODFILE CHECKSUM: b834109af0477ac5991abdcfe453b5c553d7a4c7
+PODFILE CHECKSUM: a66a9a54b869374560446c95892babbc57bceeab
 
 COCOAPODS: 1.4.0

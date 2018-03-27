@@ -11,6 +11,7 @@
 		4302F0EAB8AAD7A7E0C8082D /* Pods_meet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3FB5C71C0BD1C51E15E142 /* Pods_meet.framework */; };
 		FD546E4220690B3A0086E08D /* MyItineraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD546E4120690B3A0086E08D /* MyItineraryTableViewController.swift */; };
 		FD546E4520690BD10086E08D /* MyItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD546E4420690BD10086E08D /* MyItineraryTableViewCell.swift */; };
+		FD546E47206A32020086E08D /* TopFiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD546E46206A32020086E08D /* TopFiveCollectionViewCell.swift */; };
 		FDDEF9892068F2590023FDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEF9882068F2590023FDB6 /* AppDelegate.swift */; };
 		FDDEF98E2068F2590023FDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEF98C2068F2590023FDB6 /* Main.storyboard */; };
 		FDDEF9902068F2590023FDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDEF98F2068F2590023FDB6 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		E0B58CFBCB7EE2ED9C7FFECA /* Pods_meetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD546E4120690B3A0086E08D /* MyItineraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItineraryTableViewController.swift; sourceTree = "<group>"; };
 		FD546E4420690BD10086E08D /* MyItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItineraryTableViewCell.swift; sourceTree = "<group>"; };
+		FD546E46206A32020086E08D /* TopFiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFiveCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDDEF9852068F2590023FDB6 /* meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDEF9882068F2590023FDB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDDEF98D2068F2590023FDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				FD546E4420690BD10086E08D /* MyItineraryTableViewCell.swift */,
+				FD546E46206A32020086E08D /* TopFiveCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -433,10 +436,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-meet/Pods-meet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONAPI/JSONAPI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONAPI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -452,6 +459,7 @@
 			files = (
 				FD546E4220690B3A0086E08D /* MyItineraryTableViewController.swift in Sources */,
 				FD546E4520690BD10086E08D /* MyItineraryTableViewCell.swift in Sources */,
+				FD546E47206A32020086E08D /* TopFiveCollectionViewCell.swift in Sources */,
 				FDDEF9892068F2590023FDB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

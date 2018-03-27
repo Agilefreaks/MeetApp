@@ -40,14 +40,16 @@ extension MyItineraryTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "itinerary", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itinerary", for: indexPath) as! MyItineraryTableViewCell
         
-        // Configure the cell...
+        cell.startDateLabel.text = "30 Dec"
+        cell.endDateLabel.text = "32 Dec"
+        cell.cityLabel.text = "Sibiu"
+        cell.countryLabel.text = "Romania"
         
         return cell
     }
