@@ -6,9 +6,9 @@ use_frameworks!
 
 source 'https://github.com/CocoaPods/Specs.git'
 target 'meet' do
-    pod 'Alamofire'
+#    pod 'Alamofire'
     pod 'FoldingCell'
-    pod 'JSONAPI'
+    pod 'Vox/Alamofire'
     
     target 'meetTests' do
         inherit! :search_paths

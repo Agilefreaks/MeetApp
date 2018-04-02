@@ -18,6 +18,7 @@
 		FDDEF9932068F2590023FDB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDEF9912068F2590023FDB6 /* LaunchScreen.storyboard */; };
 		FDDEF99E2068F2590023FDB6 /* meetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEF99D2068F2590023FDB6 /* meetTests.swift */; };
 		FDDEF9A92068F2590023FDB6 /* meetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDEF9A82068F2590023FDB6 /* meetUITests.swift */; };
+		FDF52171206CE5F50041BB34 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF52170206CE5F50041BB34 /* Itinerary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FDDEF9A42068F2590023FDB6 /* meetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDEF9A82068F2590023FDB6 /* meetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meetUITests.swift; sourceTree = "<group>"; };
 		FDDEF9AA2068F2590023FDB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF52170206CE5F50041BB34 /* Itinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		FDDEF9B82068F49D0023FDB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FDF52170206CE5F50041BB34 /* Itinerary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -437,13 +440,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-meet/Pods-meet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
-				"${BUILT_PRODUCTS_DIR}/JSONAPI/JSONAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/Vox/Vox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Vox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -461,6 +464,7 @@
 				FD546E4520690BD10086E08D /* MyItineraryTableViewCell.swift in Sources */,
 				FD546E47206A32020086E08D /* TopFiveCollectionViewCell.swift in Sources */,
 				FDDEF9892068F2590023FDB6 /* AppDelegate.swift in Sources */,
+				FDF52171206CE5F50041BB34 /* Itinerary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
