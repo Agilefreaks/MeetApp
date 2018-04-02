@@ -7,46 +7,48 @@
 //
 
 import Foundation
-import Vox
+import Spine
 
 class Itinerary: Resource {
-    @objc dynamic
-    var startDate: String?
-
-    @objc dynamic
-    var endDate: String?
-
-    @objc dynamic
-    var areaName: String?
-
-    @objc dynamic
-    var countryName: String?
-
     /*------------- Relationships -------------*/
 
-    @objc dynamic
-    var picture_url: [Contact]?
+    var itineraryItems: LinkedResourceCollection?
 
     /*------------- Resource type -------------*/
 
-    // resource type must be defined
-    override class var resourceType: String {
+    override class var resourceType: ResourceType {
         return "itinerary"
     }
 
-    /*------------- Custom coding -------------*/
+    override class var fields: [Field] {
+        return fieldsFromDictionary([
+            "itineraryItems": ToManyRelationship(ItineraryItem.self),
+        ])
+    }
+}
 
-//    override class var codingKeys: [String : String] {
-//        return [
-//            "descriptionText": "description"
-//        ]
-//    }
+class ItineraryItem: Resource {
+    //    @objc dynamic
+    //    var startDate: String?
+    //
+    //    @objc dynamic
+    //    var endDate: String?
+    //
+    //    @objc dynamic
+    //    var areaName: String?
+    //
+    //    @objc dynamic
+    //    var countryName: String?
+    //
+    override class var resourceType: ResourceType {
+        return "itineraryItem"
+    }
 }
 
 class Contact: Resource {
     @objc dynamic var name: String?
 
-    override class var resourceType: String {
+    override class var resourceType: ResourceType {
         return "contact"
     }
 }

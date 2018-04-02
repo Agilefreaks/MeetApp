@@ -1,7 +1,14 @@
 PODS:
   - Alamofire (4.7.0)
+  - BrightFutures (6.0.0):
+    - Result (~> 3.2.4)
   - FoldingCell (3.0.0)
+  - Result (3.2.4)
+  - Spine (0.4):
+    - BrightFutures
+    - SwiftyJSON
   - SwiftFormat/CLI (0.33.5)
+  - SwiftyJSON (4.0.0)
   - Vox/Alamofire (1.2.0):
     - Alamofire (~> 4.7)
     - Vox/Core
@@ -9,15 +16,29 @@ PODS:
 
 DEPENDENCIES:
   - FoldingCell
+  - Spine (from `https://github.com/json-api-ios/Spine.git`)
   - SwiftFormat/CLI
   - Vox/Alamofire
 
+EXTERNAL SOURCES:
+  Spine:
+    :git: https://github.com/json-api-ios/Spine.git
+
+CHECKOUT OPTIONS:
+  Spine:
+    :commit: 0eea26afba5f4b53c25e27123f68a4584000974a
+    :git: https://github.com/json-api-ios/Spine.git
+
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  BrightFutures: 9e7604f511aed9f0d6a49b04ac9b3fca6b117758
   FoldingCell: 55e9fcac546acc2c8f110f210af892aa90032160
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  Spine: b6cd2409c852db86c6c446c5777690183499764f
   SwiftFormat: 13fd81206cf4453c19f1a5c51768c8c0d9165c30
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Vox: d3a22c63c18f445dabb41175ccb6ebc1bf31e009
 
-PODFILE CHECKSUM: ebbc70764adba7d9c122afea4e3d958726c8e58b
+PODFILE CHECKSUM: 5f6a6d7d0e39b22c56167113389c457099eeae1d
 
 COCOAPODS: 1.4.0

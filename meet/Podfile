@@ -10,6 +10,7 @@ target 'meet' do
     pod 'FoldingCell'
     pod 'Vox/Alamofire'
     pod 'SwiftFormat/CLI'
+    pod 'Spine', :git => 'https://github.com/json-api-ios/Spine.git'
     
     target 'meetTests' do
         inherit! :search_paths

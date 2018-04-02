@@ -7,8 +7,9 @@
 //
 
 import Alamofire
+import Spine
 import UIKit
-import Vox
+// import Vox
 
 private let refreshControls = UIRefreshControl()
 
@@ -25,14 +26,28 @@ struct Itinerarys {
     let contacts: [Contacts]
 }
 
+public struct FormatterMeet: KeyFormatter {
+    public func format(_ name: String) -> String {
+        return name
+    }
+
+    public func format(field: Field) -> String {
+        return field.serializedName
+    }
+}
+
 class MyItineraryTableViewController: UITableViewController {
+    var spine: Spine!
+    var httpClient: HTTPClient!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.accessibilityIdentifier = "itineraryView"
 
         setupRefreshTable()
-        getItinerary()
+//        getItinerary()
+        setupSpine()
     }
 
     var itis = [
@@ -63,6 +78,17 @@ class MyItineraryTableViewController: UITableViewController {
         }
     }
 
+    func setupSpine() {
+        httpClient = HTTPClient()
+        httpClient.setHeader("Authorization", to: "Token token=87ef0701fea507a630ecc69ff4c57c85")
+        spine = Spine(baseURL: URL(string: "https://staging.apreet.com/api/4")!, networkClient: httpClient)
+        spine.registerResource(Itinerary.self)
+        spine.registerResource(ItineraryItem.self)
+        spine.keyFormatter = FormatterMeet()
+
+        Spine.setLogLevel(.info, forDomain: .spine)
+    }
+
 //    lazy var refreshControls: UIRefreshControl = {
 //        let refreshControl = UIRefreshControl()
 //        refreshControl.addTarget(self, action:
@@ -79,30 +105,30 @@ class MyItineraryTableViewController: UITableViewController {
 //        refreshControl.endRefreshing()
 //    }
 
-    private func getItinerary() {
-        let baseURL = URL(string: "https://staging.apreet.com")!
-        let client = JSONAPIClient.Alamofire(baseURL: baseURL)
-//        let asd: HTTPHeaders = [
-//            "Authorization": "Token token=87ef0701fea507a630ecc69ff4c57c85"
-//        ]
-
-        let dataSource = DataSource<Itinerary>(strategy: .path("/api/4/itinerary/now"), client: client)
-        try! dataSource
-            .fetch()
-            .result({ (document: Document<[Itinerary]>) in
-                let documents = document.data
-                print(documents)
-            }) { error in
-                if let error = error as? JSONAPIError {
-                    switch error {
-                    case let .API(errors):
-                        ()
-                    default:
-                        ()
-                    }
-                }
-            }
-    }
+//    private func getItinerary() {
+//        let baseURL = URL(string: "https://staging.apreet.com")!
+//        let client = JSONAPIClient.Alamofire(baseURL: baseURL)
+    ////        let asd: HTTPHeaders = [
+    ////            "Authorization": "Token token=87ef0701fea507a630ecc69ff4c57c85"
+    ////        ]
+//
+//        let dataSource = DataSource<Itinerary>(strategy: .path("/api/4/itinerary/now"), client: client)
+//        try! dataSource
+//            .fetch()
+//            .result({ (document: Document<[Itinerary]>) in
+//                let documents = document.data
+//                print(documents)
+//            }) { error in
+//                if let error = error as? JSONAPIError {
+//                    switch error {
+//                    case let .API(errors):
+//                        ()
+//                    default:
+//                        ()
+//                    }
+//                }
+//            }
+//    }
 }
 
 extension MyItineraryTableViewController {
