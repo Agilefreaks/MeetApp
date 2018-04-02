@@ -15,6 +15,8 @@ class MyItineraryTableViewCell: UITableViewCell {
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var contactsCollectionView: UICollectionView!
 
+    var itis: Itinerarys?
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -26,13 +28,16 @@ class MyItineraryTableViewCell: UITableViewCell {
 
 extension MyItineraryTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
-        return 4
+        return itis!.contacts.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topFive", for: indexPath) as! TopFiveCollectionViewCell
-        cell.personImageView.image = UIImage(named: "Checked")
-        cell.personName.text = "Me"
+        if let its = itis {
+            let it = its.contacts[indexPath.row]
+            cell.personImageView.image = UIImage(named: it.image)
+            cell.personName.text = it.name
+        }
         return cell
     }
 }
