@@ -222,6 +222,7 @@
 			buildConfigurationList = FDDEF9AD2068F2590023FDB6 /* Build configuration list for PBXNativeTarget "meet" */;
 			buildPhases = (
 				D5575057348B7BCFDE458152 /* [CP] Check Pods Manifest.lock */,
+				FDF521722072300D0041BB34 /* ShellScript */,
 				FDDEF9812068F2590023FDB6 /* Sources */,
 				FDDEF9822068F2590023FDB6 /* Frameworks */,
 				FDDEF9832068F2590023FDB6 /* Resources */,
@@ -452,6 +453,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meet/Pods-meet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FDF521722072300D0041BB34 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/meet\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 

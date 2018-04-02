@@ -9,7 +9,6 @@
 import UIKit
 
 class TopFiveCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var personImageView: UIImageView!
-    @IBOutlet weak var personName: UILabel!
-    
+    @IBOutlet var personImageView: UIImageView!
+    @IBOutlet var personName: UILabel!
 }

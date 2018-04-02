@@ -9,6 +9,7 @@ target 'meet' do
 #    pod 'Alamofire'
     pod 'FoldingCell'
     pod 'Vox/Alamofire'
+    pod 'SwiftFormat/CLI'
     
     target 'meetTests' do
         inherit! :search_paths

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.0)
   - FoldingCell (3.0.0)
+  - SwiftFormat/CLI (0.33.5)
   - Vox/Alamofire (1.2.0):
     - Alamofire (~> 4.7)
     - Vox/Core
@@ -8,13 +9,15 @@ PODS:
 
 DEPENDENCIES:
   - FoldingCell
+  - SwiftFormat/CLI
   - Vox/Alamofire
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   FoldingCell: 55e9fcac546acc2c8f110f210af892aa90032160
+  SwiftFormat: 13fd81206cf4453c19f1a5c51768c8c0d9165c30
   Vox: d3a22c63c18f445dabb41175ccb6ebc1bf31e009
 
-PODFILE CHECKSUM: 8004f504f846f806319f9c004dd81686d6457e6a
+PODFILE CHECKSUM: ebbc70764adba7d9c122afea4e3d958726c8e58b
 
 COCOAPODS: 1.4.0
