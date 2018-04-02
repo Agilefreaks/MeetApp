@@ -9,7 +9,6 @@
 import Alamofire
 import Spine
 import UIKit
-// import Vox
 
 private let refreshControls = UIRefreshControl()
 
@@ -46,13 +45,12 @@ class MyItineraryTableViewController: UITableViewController {
         view.accessibilityIdentifier = "itineraryView"
 
         setupRefreshTable()
-//        getItinerary()
         setupSpine()
     }
 
     var itis = [
-        Itinerarys(startDate: "30 Dec",
-                   endDate: "31 Dec",
+        Itinerarys(startDate: "26 Dec",
+                   endDate: "28 Dec",
                    city: "Sibiu",
                    country: "Romania",
                    contacts: [Contacts(name: "Vlad", image: "Checked"), Contacts(name: "Mihai", image: "Checked"), Contacts(name: "Alin", image: "Checked")]),
@@ -88,47 +86,6 @@ class MyItineraryTableViewController: UITableViewController {
 
         Spine.setLogLevel(.info, forDomain: .spine)
     }
-
-//    lazy var refreshControls: UIRefreshControl = {
-//        let refreshControl = UIRefreshControl()
-//        refreshControl.addTarget(self, action:
-//            #selector(MyItineraryTableViewController.handleRefresh(_:)),
-//                                 for: UIControlEvents.valueChanged)
-//        refreshControl.tintColor = UIColor.red
-//
-//        return refreshControl
-//    }()
-//
-//    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-//
-//        self.tableView.reloadData()
-//        refreshControl.endRefreshing()
-//    }
-
-//    private func getItinerary() {
-//        let baseURL = URL(string: "https://staging.apreet.com")!
-//        let client = JSONAPIClient.Alamofire(baseURL: baseURL)
-    ////        let asd: HTTPHeaders = [
-    ////            "Authorization": "Token token=87ef0701fea507a630ecc69ff4c57c85"
-    ////        ]
-//
-//        let dataSource = DataSource<Itinerary>(strategy: .path("/api/4/itinerary/now"), client: client)
-//        try! dataSource
-//            .fetch()
-//            .result({ (document: Document<[Itinerary]>) in
-//                let documents = document.data
-//                print(documents)
-//            }) { error in
-//                if let error = error as? JSONAPIError {
-//                    switch error {
-//                    case let .API(errors):
-//                        ()
-//                    default:
-//                        ()
-//                    }
-//                }
-//            }
-//    }
 }
 
 extension MyItineraryTableViewController {

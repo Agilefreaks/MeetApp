@@ -147,7 +147,6 @@
 				FDDEF9B62068F4810023FDB6 /* AppDelegate */,
 				FDDEF9B72068F4880023FDB6 /* Controllers */,
 				FDDEF9B82068F49D0023FDB6 /* Model */,
-				FDDEF9B92068F4AB0023FDB6 /* Network */,
 				FDDEF9BB2068F4C60023FDB6 /* Storyboards */,
 				FD546E4320690BB60086E08D /* Views */,
 				FDDEF98F2068F2590023FDB6 /* Assets.xcassets */,
@@ -197,13 +196,6 @@
 				FDF52170206CE5F50041BB34 /* Itinerary.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		FDDEF9B92068F4AB0023FDB6 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		FDDEF9BB2068F4C60023FDB6 /* Storyboards */ = {

@@ -28,18 +28,18 @@ class Itinerary: Resource {
 }
 
 class ItineraryItem: Resource {
-    //    @objc dynamic
-    //    var startDate: String?
-    //
-    //    @objc dynamic
-    //    var endDate: String?
-    //
-    //    @objc dynamic
-    //    var areaName: String?
-    //
-    //    @objc dynamic
-    //    var countryName: String?
-    //
+    @objc dynamic
+    var startDate: String?
+
+    @objc dynamic
+    var endDate: String?
+
+    @objc dynamic
+    var areaName: String?
+
+    @objc dynamic
+    var countryName: String?
+
     override class var resourceType: ResourceType {
         return "itineraryItem"
     }

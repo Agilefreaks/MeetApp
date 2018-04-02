@@ -21,7 +21,7 @@ class meetUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func checkItinereayUI() {
         app.launch()
         let itineraryitemcellTable = app.tables["itineraryItemCell"]
         XCTAssertTrue(itineraryitemcellTable.exists)
