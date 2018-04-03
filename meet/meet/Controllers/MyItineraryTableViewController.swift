@@ -104,11 +104,12 @@ extension MyItineraryTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itinerary", for: indexPath) as! MyItineraryTableViewCell
 
         view.accessibilityIdentifier = "itineraryItemCell"
-        cell.startDateLabel.text = itis[indexPath.row].startDate
-        cell.endDateLabel.text = itis[indexPath.row].endDate
-        cell.cityLabel.text = itis[indexPath.row].city
-        cell.countryLabel.text = itis[indexPath.row].country
-        cell.itis = itis[indexPath.row]
+        let item = itis[indexPath.row]
+        cell.startDateLabel.text = item.startDate
+        cell.endDateLabel.text = item.endDate
+        cell.cityLabel.text = item.city
+        cell.countryLabel.text = item.country
+        cell.itis = item
 
         return cell
     }

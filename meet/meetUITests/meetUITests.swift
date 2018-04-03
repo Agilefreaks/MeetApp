@@ -23,6 +23,7 @@ class meetUITests: XCTestCase {
     
     func checkItinereayUI() {
         app.launch()
+        let myItinerary = "My Itinerary"
         let itineraryitemcellTable = app.tables["itineraryItemCell"]
         XCTAssertTrue(itineraryitemcellTable.exists)
         
@@ -32,8 +33,8 @@ class meetUITests: XCTestCase {
             itineraryitemcellTable.children(matching: .cell).element(boundBy: index).tap()
         }
         
-        let myItineraryNavigationBar = app.navigationBars["My Itinerary"]
-        XCTAssertTrue(myItineraryNavigationBar.otherElements["My Itinerary"].exists)
+        let myItineraryNavigationBar = app.navigationBars[myItinerary]
+        XCTAssertTrue(myItineraryNavigationBar.otherElements[myItinerary].exists)
     }
     
 }

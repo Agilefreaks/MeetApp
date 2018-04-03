@@ -16,14 +16,6 @@ class MyItineraryTableViewCell: UITableViewCell {
     @IBOutlet var contactsCollectionView: UICollectionView!
 
     var itis: Itinerarys?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }
 
 extension MyItineraryTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
