@@ -6,9 +6,7 @@ use_frameworks!
 
 source 'https://github.com/CocoaPods/Specs.git'
 target 'meet' do
-#    pod 'Alamofire'
-    pod 'FoldingCell'
-    pod 'Vox/Alamofire'
+    pod 'Alamofire'
     pod 'SwiftFormat/CLI'
     pod 'Spine', :git => 'https://github.com/json-api-ios/Spine.git'
     
