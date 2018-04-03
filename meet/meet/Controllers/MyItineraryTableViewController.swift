@@ -64,12 +64,12 @@ class MyItineraryTableViewController: UITableViewController {
 
     func setupRefreshTable() {
         tableView.refreshControl = refreshControls
-        refreshControls.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
+        refreshControls.addTarget(self, action: #selector(refreshItineraryTable(_:)), for: .valueChanged)
         refreshControls.tintColor = UIColor(red: 0.25, green: 0.72, blue: 0.85, alpha: 1.0)
         refreshControls.attributedTitle = NSAttributedString(string: "Magic ...", attributes: nil)
     }
 
-    @objc private func refreshWeatherData(_: Any) {
+    @objc private func refreshItineraryTable(_: Any) {
         DispatchQueue.main.async {
             self.tableView.reloadData()
             refreshControls.endRefreshing()
